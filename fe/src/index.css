@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-video {
+  @apply object-cover aspect-[4/3] absolute w-[25%] top-2 right-2 rounded-md;
+}
+.video-container {
+  @apply h-screen w-screen relative bg-slate-700;
+}
+.user-video {
+  @apply object-cover h-full w-full;
+  @apply md:object-contain;
+}
