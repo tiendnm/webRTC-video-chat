@@ -44,9 +44,10 @@ const useScreenRecord = () => {
     try {
       const stream = await navigator.mediaDevices.getDisplayMedia({
         video: {
-          displaySurface: "browser",
+          displaySurface: "monitor",
         },
         audio: true,
+        // preferCurrentTab: true,
       });
       streamRef.current = stream;
       recordRef.current = createRecorder(stream);
